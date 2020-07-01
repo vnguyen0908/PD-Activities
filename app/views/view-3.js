@@ -4,7 +4,7 @@ let views;
 
 export function init(_views) {
 	views = _views;
-	console.log("view-1 init()");
+	console.log("view-3 init()");
 	onMount();
 }
 
@@ -13,13 +13,18 @@ export function init(_views) {
  */
 function onMount() {
 
-	let walkButton = document.getElementById("walkButton");
-	walkButton.onactivate = function (evt) {
-		console.log("Walk Button");
-		walkButton.addEventListener("click", clickHandler);
+	let Pausebutton = document.getElementById("Pausebutton");
+	Pausebutton.onactivate = function (evt) {
+		console.log("Pause activate");
+		Pausebutton.addEventListener("click", clickHandler);
+	}
+	let Stopbutton = document.getElementById("Stopbutton");
+	Stopbutton.onactivate = function (evt) {
+		console.log("Stop activate");
+		Stopbutton.addEventListener("click", clickHandler);
 	}
 }
 function clickHandler(_evt) {
 	/* Navigate to another screen */
-	views.navigate("view-1");
+	views.navigate("view-2");
 }

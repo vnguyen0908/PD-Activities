@@ -4,7 +4,7 @@ let views;
 
 export function init(_views) {
 	views = _views;
-	console.log("view-1 init ()");
+	console.log("view-2 init ()");
 	onMount();}
  
 function onMount() {
@@ -16,11 +16,16 @@ let Startbutton = document.getElementById("Startbutton");
 	let Laterbutton = document.getElementById("Laterbutton");
 	Laterbutton.onactivate = function (evt) {
 		console.log("Later activate");
-		Laterbutton.addEventListener("click", clickHandler);
+		Laterbutton.addEventListener("click",clickHandler1)
 	}
-
-function clickHandler(_evt) {
-	/* Navigate to another screen */
-	views.navigate("view-1");}
 }
+function clickHandler(_evt) {
+	console.log("Start activate");
+	/* Navigate to another screen */
+	views.navigate("view-3");}
 
+	function clickHandler1(evt) {
+		console.log("Later activate");
+		  views.navigate("view-1");
+		}
+	  

@@ -1,24 +1,22 @@
 <svg>
-<use href="#tile-list-item" class="tile-list-item">
-		  <use id="walkButton" href="#square-button" fill="fb-red">
-			  <set href="#text" attributeName="text-buffer" to="Walking" />
-		  </use>
-	  </use>
-<use id="stats-cycle" href="#cycleview">
-    <use href="#cycleview-item" class="cycle-item">
-      <text>Steps: 1,337</text>
-    </use>
-    <use href="#cycleview-item" class="cycle-item">
-      <text>Calories: 731</text>
-    </use>
-    <use href="#cycleview-item" class="cycle-item">
-      <text>Distance: 1.00mi</text>
-    </use>
-    <use href="#cycleview-item" class="cycle-item">
-      <text>Floors: 10</text>
-    </use>
-    <use href="#cycleview-item" class="cycle-item">
-      <text>Active: 13</text>
-    </use>
+<use href="#mixed-text-center-mid" class="dialog-mixed-text" fill="fb-white">
+    <set href="#top-padding" attributeName="display" to="none" />
+    <set href="#header/text" attributeName="text-buffer" to="WORKING..." />
+    <set href="#header/text" attributeName="fill" to="fb-blue"/>
+    <set href="#copy/text" attributeName="text-buffer" to="Looking good! :)" />
+    <set href="#bottom-padding" attributeName="display" to="none" />
   </use>
+
+  <!-- Left button -->
+  <use id="Pausebutton" class="dialog-half-button-left" href="#square-button-neutral">
+    <set href="#text" attributeName="text-buffer" to="Pause" />
+    <set href="#text" attributeName="text-anchor" to="middle" />
+  </use>
+
+  <!-- Right button -->
+  <use id="Stopbutton" class="dialog-half-button-right" href="#square-button-negative">
+    <set href="#text" attributeName="text-buffer" to="Stop" />
+    <set href="#text" attributeName="text-anchor" to="middle" />
+  </use>
+
   </svg>

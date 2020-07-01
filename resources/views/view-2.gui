@@ -14,7 +14,7 @@
   </use>
 
   <!-- Right button -->
-  <use id="Startbutton" class="dialog-half-button-right" href="#square-button-negative">
+  <use id="Startbutton" class="dialog-half-button-right" href="#square-button-positive">
     <set href="#text" attributeName="text-buffer" to="Start" />
     <set href="#text" attributeName="text-anchor" to="middle" />
   </use>
