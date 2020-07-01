@@ -1,0 +1,24 @@
+<svg>
+<use href="#tile-list-item" class="tile-list-item">
+		  <use id="walkButton" href="#square-button" fill="fb-red">
+			  <set href="#text" attributeName="text-buffer" to="Walking" />
+		  </use>
+	  </use>
+<use id="stats-cycle" href="#cycleview">
+    <use href="#cycleview-item" class="cycle-item">
+      <text>Steps: 1,337</text>
+    </use>
+    <use href="#cycleview-item" class="cycle-item">
+      <text>Calories: 731</text>
+    </use>
+    <use href="#cycleview-item" class="cycle-item">
+      <text>Distance: 1.00mi</text>
+    </use>
+    <use href="#cycleview-item" class="cycle-item">
+      <text>Floors: 10</text>
+    </use>
+    <use href="#cycleview-item" class="cycle-item">
+      <text>Active: 13</text>
+    </use>
+  </use>
+  </svg>
