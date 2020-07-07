@@ -1,7 +1,7 @@
 import document from "document";
 import { init } from "./views";
 import { HeartRateSensor } from "heart-rate";
-import { Accelerometer } from "accelerometer";
+import { Barometer } from "barometer";
 
 // Fetch UI elements we will need to change
 let hrLabel = document.getElementById("hrm");
@@ -22,12 +22,12 @@ const views = init(
 
 // This function updates the heart rate printed to console.
 function updateDisplay() {
-        console.log("Current heart rate: " + hrm.heartRate);
+        console.log( +hrm.heartRate + ","+ bar.pressure);
 }
 
 // Create a new instance of the HeartRateSensor object
 var hrm = new HeartRateSensor();
-                                
+var bar = new Barometer ({frequency: 1})                                
 // Select the first view (view-1) after 1 second
 setTimeout(() => {              
     views.navigate("view-1");   
@@ -35,7 +35,7 @@ setTimeout(() => {
 
 // Begin monitoring the sensor
 hrm.start();
-
+bar.start();
 // And update the display every second
 setInterval(updateDisplay, 1000);
 
